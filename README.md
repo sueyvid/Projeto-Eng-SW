@@ -1,3 +1,10 @@
+# Descrição do trabalho
+Trabalho em grupo da disciplina de Engenharia de Software, semestre 2025.1. O sistema representa um Aplicativo de celular, onde um personal trainer pode gerenciar os treinos de seus alunos.
+## Componentes do grupo:
+- SUEYVID JOSE BARBOSA PAULO
+- JOEL RODRIGUES DE LIMA
+- LUCAS FREIRE COSTA
+
 # Diagrama de caso de uso
 O diagrama de caso de uso é uma ferramenta visual que descreve as interações entre o sistema e seus usuários (atores) e as funcionalidades (casos de uso) que o sistema oferece.
 ![Diagrama de caso de uso](./diagrama_de_caso_de_uso.jpg)
