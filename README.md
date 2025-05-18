@@ -1,3 +1,7 @@
+# Diagrama de caso de uso
+O diagrama de caso de uso é uma ferramenta visual que descreve as interações entre o sistema e seus usuários (atores) e as funcionalidades (casos de uso) que o sistema oferece.
+![Diagrama de caso de uso](./diagrama_de_caso_de_uso.jpg)
+
 # Casos de uso
 
 ## Gerenciar conta
