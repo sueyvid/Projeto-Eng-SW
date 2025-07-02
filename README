@@ -1,0 +1,41 @@
+1.Criar ambiente do projeto 
+    mkdir academia-fastapi
+    cd academia-fastapi
+    python3 -m venv venv
+    source venv/bin/activate
+
+PASSO 2: Instalar pacotes
+    cd /home/joel_lima_130/academia-fastapi/venv/
+    pip install -r requirements.txt
+
+PASSO 3: Instalar e configurar PostgreSQL no Cloud Shell
+    sudo apt update
+    sudo apt install postgresql postgresql-contrib -y
+Iniciar e configurar banco:
+    sudo service postgresql start
+    sudo -u postgres psql
+No terminal interativo do PostgreSQL, digite (um por linha):
+    CREATE DATABASE academia;
+    CREATE USER usuario WITH PASSWORD 'senha';
+    ALTER ROLE usuario SET client_encoding TO 'utf8';
+    ALTER ROLE usuario SET default_transaction_isolation TO 'read committed';
+    ALTER ROLE usuario SET timezone TO 'UTC';
+    GRANT ALL PRIVILEGES ON DATABASE academia TO usuario;
+    \q
+Sua string de conexão PostgreSQL será:
+    postgresql://usuario:senha@localhost/academia
+PASSO 4: Estrutura do projeto
+    Crie os arquivos dentro da pasta academia-fastapi/app/:
+    mkdir app
+    touch app/{main.py,database.py,models.py,schemas.py,crud.py,auth.py}
+    mkdir app/routes
+
+
+PASSO 5: Rodar o servidor FastAPI
+    uvicorn app.main:app --host 0.0.0.0 --port 8080
+
+PASSO 6: Visualizar no navegador
+    usar o webpreview do google cloud shell, ele fica no canto superior direito
+
+Dps de usar o servidor FASTAPI, vc precisa colocar um \docs no fim da url
+tipo assim: https://8080-cs-693197316095-default.cs-us-east1-rtep.cloudshell.dev/docs#/
